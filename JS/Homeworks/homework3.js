@@ -20,9 +20,6 @@ users.push(user1);
 users.push(user2);
 users.push(user3);
 
-let username = "";
-let password = "";
-
 function userExists(users, username) {
     let exists = false;
     if (users.length == 0) {
