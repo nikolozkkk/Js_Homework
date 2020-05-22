@@ -1,4 +1,5 @@
 let car = {
+    id: "bmw",
     manufacturer: "BMW",
     model: "M5",
     horse_power: "123HP",
@@ -8,6 +9,7 @@ let car = {
 };
 
 let car2 = {
+    id: "mercedes",
     manufacturer: "Mercedes benz",
     model: "G Wagon",
     horse_power: "123HP",
@@ -16,6 +18,7 @@ let car2 = {
     price: 4002
 };
 let car3 = {
+    id: "audi",
     manufacturer: "Audi",
     model: "A8",
     horse_power: "123HP",
@@ -24,7 +27,8 @@ let car3 = {
     price: 1203
 };
 let car4 = {
-    manufacturer: "BMW",
+    id: "skoda",
+    manufacturer: "SKODA",
     model: "X6",
     horse_power: "123HP",
     year: 2015,
