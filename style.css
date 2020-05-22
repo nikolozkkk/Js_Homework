@@ -1,0 +1,14 @@
+.img-box {
+    padding-top: 60%;
+    position: relative;
+}
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+}
+.text-center:hover {
+    color: red;
+}
