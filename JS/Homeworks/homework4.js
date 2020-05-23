@@ -42,6 +42,27 @@ cars.push(car2);
 cars.push(car3);
 cars.push(car4);
 
+// alert
+cars = [car, car2, car3, car4];
+function displayDescription(carId) {
+    let foundCar = findCarById(carId);
+    let description = getDescription(foundCar);
+
+    alert(description);
+}
+
+function findCarById(carId) {
+    for(i=0; i< cars.length; i++) {
+        if(cars[i].id === carId) {
+            return cars[i];
+        }
+    }
+}
+
+function getDescription(car) {
+    return `ამ მანქანას აქვს შემდეგი მახასიათებლები: \nManufacturer:  ${car.manufacturer}  \nColor:  ${car.color}  \nModel:  ${car.model}  \nYear:  ${car.year}  \nHorsePower:  ${car.horse_power}  \nPrice: ${ car.price}  \n`;
+}
+
 function checkedData() {
     // data ცვლადში ვინახავთ მომხამრებლის მიერ შეტანილ ინფორმაციას
     let data = document.getElementById("price").value;
