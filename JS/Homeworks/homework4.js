@@ -91,8 +91,10 @@ function checkedData() {
                         message += "•" + alertableData[j].manufacturer + " (" + alertableData[j].model + ") - " + alertableData[j].price;
                     }
                 }
+                alert(message);
+            } else {
+                alert("სამუხაროდ ამ ფასში მანქანა ვერ მოიძებნა");
             }
-            alert(message);
         }
     }
 }
