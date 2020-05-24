@@ -63,6 +63,9 @@ function getDescription(car) {
     return `ამ მანქანას აქვს შემდეგი მახასიათებლები: \nManufacturer:  ${car.manufacturer}  \nColor:  ${car.color}  \nModel:  ${car.model}  \nYear:  ${car.year}  \nHorsePower:  ${car.horse_power}  \nPrice: ${ car.price}  \n`;
 }
 
+
+
+
 function checkedData() {
     // data ცვლადში ვინახავთ მომხამრებლის მიერ შეტანილ ინფორმაციას
     let data = document.getElementById("price").value;
