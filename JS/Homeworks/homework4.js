@@ -101,3 +101,11 @@ function checkedData() {
         }
     }
 }
+
+///////HOMEWORK 5
+
+function setName() {
+    for (let i = 0; i < cars.length; i++) {
+        document.getElementById("title" + cars[i].id).innerHTML = cars[i].manufacturer + ' - ' + cars[i].model;
+    }
+}
