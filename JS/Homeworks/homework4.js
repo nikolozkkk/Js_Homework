@@ -71,7 +71,7 @@ function checkedData() {
     let data = document.getElementById("price").value;
     let alertableData = [];
     // თუ data-ს მნიშვნელობა არ არის ციფრებისგან შემდგარი
-    if (isNaN(data)) {
+    if (isNaN(data) || data == "") {
         alert("გთხოვთ შეიყვანოთ ფასი სწორ ფორმატში.");
     } else {
         //ვამოწმებთ არის თუ არა ჩვენი მანქანების მასივი ცარიელი
@@ -107,5 +107,61 @@ function checkedData() {
 function setName() {
     for (let i = 0; i < cars.length; i++) {
         document.getElementById("title" + cars[i].id).innerHTML = cars[i].manufacturer + ' - ' + cars[i].model;
+    }
+}
+
+function averagePrice() {
+    let priceSum = 0;
+    let averagePrice = 0;
+    if (cars.length > 0) {
+        for (let i = 0; i < cars.length; i++) {
+            priceSum += cars[i].price;
+        }
+        averagePrice = parseInt(priceSum / cars.length);
+        alert("ჩვენს საიტზე არსებული მანქანების საშუალო ღირებულება არის : " + averagePrice);
+    }
+}
+
+function disableAllExceptMax() {
+    let disableableButtons = [];
+    let maxPrice = cars[0].price;
+    allButtonsReset();
+    for (let i = 1; i < cars.length; i++) {
+        if (maxPrice < cars[i].price) {
+            maxPrice = cars[i].price;
+        }
+    }
+    for (let j = 0; j < cars.length; j++) {
+        if (cars[j].price < maxPrice) {
+            disableableButtons.push(cars[j].id);
+        }
+    }
+    for (let k = 0; k < disableableButtons.length; k++) {
+        document.getElementById("disable" + disableableButtons[k]).disabled = true;
+    }
+}
+
+function disableAllExceptMin() {
+    let disableableButtons = [];
+    let minPrice = cars[0].price;
+    allButtonsReset();
+    for (let i = 1; i < cars.length; i++) {
+        if (minPrice > cars[i].price) {
+            minPrice = cars[i].price;
+        }
+    }
+    for (let j = 0; j < cars.length; j++) {
+        if (cars[j].price > minPrice) {
+            disableableButtons.push(cars[j].id);
+        }
+    }
+    for (let k = 0; k < disableableButtons.length; k++) {
+        document.getElementById("disable" + disableableButtons[k]).disabled = true;
+    }
+}
+
+function allButtonsReset() {
+    for (let i = 0; i < cars.length; i++) {
+        document.getElementById("disable" + cars[i].id).disabled = false;
     }
 }

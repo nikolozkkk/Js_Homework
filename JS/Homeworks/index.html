@@ -16,26 +16,33 @@
             <input id="price" placeholder="შეიყვანეთ ფასი">
             <button class="btn btn-primary" onclick="checkedData()">შემოწმება</button>
         </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-danger" onclick="disableAllExceptMax()">ყველაზე ძვირიანი
+                მანქანა</button>
+            <button class="btn btn-warning" onclick="averagePrice()">საშუალო ფასი</button>
+            <button type="button" class="btn btn-danger" onclick="disableAllExceptMin()">ყველაზე იაფიანი
+                მანქანა</button>
+        </div>
         <div class="row" style="padding-top: 50px;">
             <div id="bmw" class="col-3" onclick="displayDescription(this.id)">
                 <h2 id="titlebmw"></h2>
                 <img src="images/bmw.jpg" class="w-100">
-                <button class="btn btn-primary w-100">ყიდვა</button>
+                <button id="disablebmw" class="btn btn-primary w-100">ყიდვა</button>
             </div>
             <div id="mercedes" class="col-3" onclick="displayDescription(this.id)">
                 <h2 id="titlemercedes"></h2>
                 <img src="images/mercedes.jpg" class="w-100">
-                <button class="btn btn-primary w-100">ყიდვა</button>
+                <button id="disablemercedes" class="btn btn-primary w-100">ყიდვა</button>
             </div>
             <div id="audi" class="col-3" onclick="displayDescription(this.id)">
                 <h2 id="titleaudi"></h2>
                 <img src="images/audi.jpg" class="w-100">
-                <button class="btn btn-primary w-100">ყიდვა</button>
+                <button id="disableaudi" class="btn btn-primary w-100">ყიდვა</button>
             </div>
             <div id="skoda" class="col-3" onclick="displayDescription(this.id)">
                 <h2 id="titleskoda"></h2>
                 <img src="images/skoda.jpg" class="w-100">
-                <button class="btn btn-primary w-100">ყიდვა</button>
+                <button id="disableskoda" class="btn btn-primary w-100">ყიდვა</button>
             </div>
         </div>
     </div>
