@@ -68,7 +68,6 @@ function passwordQuality(password) {
     let error = document.getElementById("error");
     if (password != undefined) {
         if (password.length >= 8) {
-            sessionStorage.setItem("lastname", "Smith");
             window.location = "index.html";
         } else {
             error.innerHTML = "შეხვედით სისტემაში წარმატებით, თუმცა გთხოვთ შეცვალოთ პაროლი";
@@ -84,7 +83,6 @@ function redirectLogin() {
 function loginActionOnBtnClick() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-
     let existsUser = userExists(users, username);
     let passMatches = passwordMatch(users, existsUser, password);
     passwordQuality(passMatches);
