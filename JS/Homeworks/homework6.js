@@ -34,9 +34,7 @@ function userExists(users, email) {
         if (users[i].email === email) {
             exists = true;
             i = users.length;
-        } else {
-            exists = false;
-        }
+        } 
     }
     if (!exists) {
         error.innerHTML = "მოცემული მეილით მომხმარებელი არ მოიძებნა"
@@ -55,8 +53,6 @@ function passwordMatch(users, email, password) {
             if (email === users[i].email && users[i].password === password) {
                 matches = true;
                 i = users.length;
-            } else {
-                matches = false;
             }
         }
         if (!matches) {
