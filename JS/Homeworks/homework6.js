@@ -89,7 +89,7 @@ function passwordPattern(pass) {
 }
 
 function emailPattern(email) {
-    const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*.([a-z]{2,3})/;
+    const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*.([a-z]{2,3})/i;
     let result = pattern.exec(email);
     return result !== null;
 }
