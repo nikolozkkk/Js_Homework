@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 4</title>
+    <title>Homeworks</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
 
-<body onload="setName()">
+<body>
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <button class="btn btn-outline-danger my-2 my-sm-0" onclick="redirectLogin()">login</button>
+        <button id="login" class="btn btn-outline-danger my-2 my-sm-0">login</button>
     </nav>
     <div class="container" style="margin-top: 150px;">
         <div class="text-center">
             <input id="price" placeholder="შეიყვანეთ ფასი">
-            <button class="btn btn-primary" onclick="checkedData()">შემოწმება</button>
+            <button id="checkprice" class="btn btn-primary">შემოწმება</button>
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-danger" onclick="disableAllExceptMax()">ყველაზე ძვირიანი
+            <button id="maxprice" class="btn btn-danger">ყველაზე ძვირიანი
                 მანქანა</button>
-            <button class="btn btn-warning" onclick="averagePrice()">საშუალო ფასი</button>
-            <button type="button" class="btn btn-danger" onclick="disableAllExceptMin()">ყველაზე იაფიანი
+            <button id="average" class="btn btn-warning">საშუალო ფასი</button>
+            <button id="minprice" class="btn btn-danger">ყველაზე იაფიანი
                 მანქანა</button>
         </div>
         <div class="row" style="padding-top: 50px;">
@@ -49,8 +49,9 @@
             </div>
         </div>
     </div>
-    <script src="homework4.js"></script>
-    <script src="homework6.js"></script>
+    <!-- <script src="homework4.js"></script>
+    <script src="homework6.js"></script> -->
+    <script src="cars.js"></script>
 </body>
 
 </html>
