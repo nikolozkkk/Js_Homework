@@ -1,0 +1,16 @@
+{
+    "name": "cars",
+    "version": "1.0.0",
+    "description": "My homeworks",
+    "main": "cars.js",
+    "scripts": {
+        "start": "http-server"
+    },
+    "author": "Nikoloz",
+    "devDependencies": {
+        "http-server": "^0.9.0"
+    },
+    "dependencies": {
+        "requirejs": "^2.3.6"
+    }
+}
